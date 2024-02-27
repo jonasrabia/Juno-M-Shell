@@ -7,7 +7,7 @@ Juno M-Shell calculated with Python 3.9.12 using JRM33+CON2020 between PJ1 (2016
 - JRM33 and CON2020 models have been implemented in IDL, Matlab and Python as part of Magnetospheres of the Outer Planets (MOP) Group Community Code and Planetary Spherical Harmonics (PSH) community code projects. They are publicly available at https://github.com/rjwilson-LASP/PSH (JRM33), https://github.com/mattkjames7/JupiterMag (JRM33) and https://github.com/gabbyprovan/con2020 (CON2020). See Wilson et al.,(2023) for further description of the numerical models.
 - Magnetic field lines are traced from Juno towards the magnetic equator with a constant step size of 1/250 R<sub>J</sub>.
 - Outer boundary of the calculation is set at R=30 R<sub>J</sub> because of model uncertainties beyond this distance.
-  
+- M-Shell is found by following the magnetic field lines until reaching the minimum magnetic field strength, which correspond to the magnetic equator.  
 ### Data description 
 
 Data are organized according to perijoves. Information on the dates corresponding to each perijove and on Juno's trajectory can be found at https://lasp.colorado.edu/mop/missions/juno/trajectory-information/. The data files contain 6 columns. A description of the contents of these columns is provided in the following table. 
