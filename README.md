@@ -1,10 +1,10 @@
 ## Juno-M-Shell
-Juno M-Shell calculated with Python 3.9.12 using JRM33+CON2020 between PJ1 (2016-08-27) and PJ56 (2023-11-22) with a 1s-resolution, limited to M < 30. Data are provided by Jonas RABIA (IRAP-CNRS, contact : jonas.rabia@irap.omp.eu) and are also available at https://amda.cdpp.eu. 
+Juno M-Shell calculated with Python 3.9.12 using JRM33+CON2020 between PJ1 (2016-08-27) and PJ56 (2023-11-22) with a 1s-resolution. Data are provided by Jonas RABIA (IRAP-CNRS, contact : jonas.rabia@irap.omp.eu) and are also available at https://amda.cdpp.eu. 
 
 ### Models and calculation parameters
 - Jupiter's internal magnetic field is calculated using JRM33 with the 13th-order coefficients. The model is described in Connerney et al.,(2022).
 - The magnetic field induced by the magnetodisc is calculated using the analytical version of the CON2020 model. The model is described in Connerney et al.,(2020).
-- JRM33 and CON2020 models have been implemented in IDL, Matlab and Python as part of Magnetospheres of the Outer Planets Group Community Code and PSH: Planetary Spherical Harmonics community code project. They are publicly available at https://github.com/rjwilson-LASP/PSH (JRM33), https://github.com/mattkjames7/JupiterMag (JRM33) and https://github.com/gabbyprovan/con2020 (CON2020). See Wilson et al.,(2023) for further description of the numerical models.
+- JRM33 and CON2020 models have been implemented in IDL, Matlab and Python as part of Magnetospheres of the Outer Planets (MOP) Group Community Code and Planetary Spherical Harmonics (PSH) community code projects. They are publicly available at https://github.com/rjwilson-LASP/PSH (JRM33), https://github.com/mattkjames7/JupiterMag (JRM33) and https://github.com/gabbyprovan/con2020 (CON2020). See Wilson et al.,(2023) for further description of the numerical models.
 - Magnetic field lines are traced from Juno towards the magnetic equator with a constant step size of 1/250 R<sub>J</sub>.
 - Outer boundary of the calculation is set at R=30 R<sub>J</sub> because of model uncertainties beyond this distance.
   
@@ -22,8 +22,10 @@ Data are organized according to perijoves. Information on the dates correspondin
 
 
 ### Plot description 
-Representation of the results can be found for each perijove. M-Shell values are represented along Juno's trajectory, plotted in cylindrical magnetic coordinates. CON2020 coordinate system is used, which has a z-axis tilted by 9.3° toward longitude λ<sub>S3RH</sub> = 155.8°. Large and small dots highlight Juno's position every day and hour, respectively. The corresponding day of year (DOY) is indicated for each new day. 
-Magnetic field lines connected to the orbit of Io (R = 5.89 R<sub>J</sub>), Europa (R = 9.38 R<sub>J</sub>), Ganymede (R = 14.97 R<sub>J</sub>), Callisto (R = 26.3 R<sub>J</sub>) and the outer limit of the calculation (R = 30 R<sub>J</sub>) are displayed as gray lines. 
+- Wiggle plot : M-Shell values are represented along Juno's trajectory, plotted in cylindrical magnetic coordinates, for each perijove. CON2020 coordinate system is used, which has a z-axis tilted by 9.3° toward longitude λ<sub>S3RH</sub> = 155.8°. Large and small dots highlight Juno's position every day and hour, respectively. The corresponding day of year (DOY) is indicated for each new day. 
+Magnetic field lines connected to the orbit of Io (R = 5.89 R<sub>J</sub>), Europa (R = 9.38 R<sub>J</sub>), Ganymede (R = 14.97 R<sub>J</sub>), Callisto (R = 26.3 R<sub>J</sub>) and the outer limit of the calculation (R = 30 R<sub>J</sub>) are displayed as gray lines.
+
+- Time series : M-Shell values are represented as a function of time, for each perijove. 
 
 ### References 
 - Connerney, J. E. P., Timmins, S., Oliversen, R. J., Espley, J. R., Joergensen, J. L., Kotsiaros, S., et al. (2022). A new model of Jupiter's magnetic field at the completion of Juno's Prime Mission. Journal of Geophysical Research: Planets, 127, e2021JE007055. https://doi.org/10.1029/2021JE007055
