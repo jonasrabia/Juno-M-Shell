@@ -1,0 +1,45 @@
+#### File characteristics 
+
+FILE_NAME = "jno_mshell_orb"
+COLUMNS_NUMBER = 6 
+DESCRIPTION =	"Juno M-Shell calculated with Python 3.9.12 using JRM33+CON2020 between PJ1 (2016-08-27) and PJ56 (2023-11-22) with 1s-resolution. 
+	       	Spatial resolution of the field line tracing method is 1/250 Rj ~ 300 km. Outer boundary is set to R=30 Rj (1 Rj = 71,492 km).
+	       	JRM33 13th-order coefficients and the analytical version of CON2020 are used for the calculation.
+		Data are publicly available at https://amda.cdpp.eu""
+PROVIDER = 	"Jonas RABIA, IRAP-CNRS
+		contact: jonas.rabia@irap.omp.eu" 
+
+
+### Data description
+COLUMNS = {
+	OBJECT = "TIMEUT"
+	TYPE = STR 
+	UNIT = 0 
+	DESCRIPTION = "Date, format is YYYY-MM-DDThh:mm:ss"
+
+	OBJECT = "Orb" 
+	TYPE = INT 
+	UNIT = 0 
+	DESCRIPTION = "Perijove number" 
+
+	OBJECT = "M" 
+	TYPE = FLOAT64 
+	UNIT = 0 
+	DESCRIPTION = "M-Shell, radial distance of the intersection between the magnetic field line and the magnetic equator, normalized to 1 Rj (1 Rj = 71,492 km)" 
+
+	OBJECT = "t" 
+	TYPE = FLOAT64 
+	UNIT = deg
+	DESCRIPTION = "Colatitude (S3RH) of the intersection between the magnetic field line and the magnetic equator" 
+
+	OBJECT = "p" 
+	TYPE = FLOAT64 
+	UNIT = deg
+	DESCRIPTION = "Longitude (S3RH) of the intersection between the magnetic field line and the magnetic equator" 	
+ 
+	OBJECT = "S" 
+	TYPE = FLOAT64 
+	UNIT = Rj
+	DESCRIPTION = "Curvilinear distance along the magnetic field line between Juno and the magnetic equator" 
+
+}
