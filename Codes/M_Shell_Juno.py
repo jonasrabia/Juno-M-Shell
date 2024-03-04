@@ -159,7 +159,7 @@ direction*np.array([ds*unitaire])
         # Get fictive particle distance to Jupiter
         r_in = fictive_particle_position_rtp[0][0]
         mlat = magnetic_lat_CON2020(fictive_particle_position_rtp[0][2], 90-fictive_particle_position_rtp[0][1])
-        z_mag = r_in*np.cos(np.radians(90-mlat))
+        z_mag = r_in*np.cos(np.radians(90-mlat)) # Same as r_in*np.sin(np.radians(mlat))
 
         # Saving iteration data
         B.append(Bmag)
@@ -169,7 +169,7 @@ direction*np.array([ds*unitaire])
 
         
         # Breaking conditions 
-        if B[i]>B[i-1] and B[i-1]>B[i-2]:
+        if B[i]>B[i-1] and B[i-1]>B[i-2]: # Double check the increase of B strength 
             M = r_list[i-2]
             t_end = t_list[i-2]
             p_end = p_list[i-2]
@@ -189,7 +189,6 @@ direction*np.array([ds*unitaire])
             p_end = np.nan
             S = np.nan
             break 
-        
         
         if i == n_max - 1 : 
             M = np.nan
