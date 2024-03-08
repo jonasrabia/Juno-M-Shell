@@ -1,6 +1,6 @@
 #### File characteristics 
 
-FILE_NAME = "jno_mshell_orb"
+FILE_NAME = "jno_mshell_orbXX.txt"
 COLUMNS_NUMBER = 6 
 DESCRIPTION =	"Juno M-Shell calculated with Python 3.9.12 using JRM33+CON2020 between PJ1 (2016-08-27) and PJ56 (2023-11-22) with 1s-resolution. 
 	       	Spatial resolution of the field line tracing method is 1/250 Rj ~ 300 km. Outer boundary is set to R=30 Rj (1 Rj = 71,492 km).
