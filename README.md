@@ -8,7 +8,7 @@ Juno M-Shell calculated with Python 3.9.12 using JRM33+CON2020 between PJ1 (2016
 - M-Shell is found by tracing the magnetic field lines until reaching the minimum magnetic field strength, which correspond to the magnetic equator.
 - Magnetic field lines are traced from Juno towards the magnetic equator with a constant step size of 1/250 R<sub>J</sub>.
 - Outer boundary of the calculation is set at R=30 R<sub>J</sub> because of model accuracy beyond this distance (see Connerney et al., 2020 and Rabia et al., 2024 for further details).
-- Due to the limitation in the spatial resolution of the computation performed (constant size steps of 1/250 R<sub>J</sub>), small stalls in colatitude, longitude, and curvilinear distance may exceptionaly occur close to the magnetic equator when displaying the data. 
+- Due to the limitation in the spatial resolution of the computation performed (constant size steps of 1/250 R<sub>J</sub>), small stalls in colatitude, longitude, and curvilinear distance may exceptionally occur close to the magnetic equator when displaying the data. 
 
 
 ### Data description 
