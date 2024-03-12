@@ -2,12 +2,12 @@
 Juno M-Shell calculated with Python 3.9.12 using JRM33+CON2020 between PJ1 (2016-08-27) and PJ56 (2023-11-22) with a 1s-resolution. Data are provided by Jonas RABIA (IRAP-CNRS, contact : jonas.rabia@irap.omp.eu) and are also available at https://amda.cdpp.eu. 
 
 ### Models and calculation parameters
-- Jupiter's internal magnetic field is calculated using JRM33 with the 13th-order coefficients. The model is described in Connerney et al.,(2022).
-- The magnetic field induced by the magnetodisc is calculated using the analytical version of the CON2020 model. The model is described in Connerney et al.,(2020).
-- JRM33 and CON2020 models have been implemented in IDL, Matlab and Python as part of Magnetospheres of the Outer Planets (MOP) Group Community Code and Planetary Spherical Harmonics (PSH) community code projects. They are publicly available at https://github.com/rjwilson-LASP/PSH (JRM33), https://github.com/mattkjames7/JupiterMag (JRM33) and https://github.com/gabbyprovan/con2020 (CON2020). See Wilson et al.,(2023) for further description of the numerical models. The extended models and the routine used for these calculations are provided here. 
+- Jupiter's internal magnetic field is calculated using JRM33 with the 13th-order coefficients. The model is described in Connerney et al.,(2022). 
+- The magnetic field induced by the magnetodisc is calculated using an analytical version of the CON2020 model. The model is described in Connerney et al.,(2020). B<sub>r</sub> and B<sub>θ</sub> components are calculated using the analytical equations provided in the Appendix of Connerney et al.,(1981). B<sub>Φ</sub> calculation is done using a routine from the CON2020 Community code (https://github.com/gabbyprovan/con2020). The magnetodisc parameters that best fit the 24-first Juno orbits are used, i.e., (R<sub>0</sub>, R<sub>1</sub>, D, μ<sub>0</sub>I/2, μ<sub>0</sub>I<sub>R</sub>/2π, θ<sub>d</sub>, Φ<sub>d<sub>S3RH</sub></sub>) = (7.8 R<sub>J</sub>, 51.4 R<sub>J</sub>, 3.6 R<sub>J</sub>, 139.6 nT, 16.7 MA, 9.3°, 155.8° )  
+- The JRM33 model used for these calculations is adapted from a publicly available model that can be found athttps://github.com/rjwilson-LASP/PSH. The JRM33-order 13 model, the analytical CON20 model and the routine used for the M-Shell calculations are provided in the Codes directory.
+- M-Shell is found by tracing the magnetic field lines until reaching the minimum magnetic field strength, which correspond to the magnetic equator.
 - Magnetic field lines are traced from Juno towards the magnetic equator with a constant step size of 1/250 R<sub>J</sub>.
 - Outer boundary of the calculation is set at R=30 R<sub>J</sub> because of model accuracy beyond this distance (see Connerney et al., 2020 and Rabia et al., 2024 for further details).
-- M-Shell is found by tracing the magnetic field lines until reaching the minimum magnetic field strength, which correspond to the magnetic equator.
 - Due to the limitation in the spatial resolution of the computation performed (constant size steps of 1/250 R<sub>J</sub>), small stalls in colatitude, longitude, and curvilinear distance may exceptionaly occur close to the magnetic equator when displaying the data. 
 
 
@@ -33,6 +33,7 @@ Magnetic field lines connected to the orbit of Io (R = 5.89 R<sub>J</sub>), Euro
 ### References 
 - Connerney, J. E. P., Timmins, S., Oliversen, R. J., Espley, J. R., Joergensen, J. L., Kotsiaros, S., et al. (2022). A new model of Jupiter's magnetic field at the completion of Juno's Prime Mission. Journal of Geophysical Research: Planets, 127, e2021JE007055. https://doi.org/10.1029/2021JE007055
 - Connerney, J. E. P., Timmins, S., Herceg, M., & Joergensen, J. L. (2020). A Jovian magnetodisc model for the Juno era. Journal of Geophysical Research: Space Physics, 125, e2020JA028138. https://doi.org/10.1029/2020JA028138
+- Connerney, J. E. P., M. H. Acuña, and N. F. Ness (1981), Modeling the Jovian current sheet and inner magnetosphere, J. Geophys. Res., 86(A10), 8370–8384, doi:10.1029/JA086iA10p08370
 - Wilson, R.J., Vogt, M.F., Provan, G. et al. Internal and External Jovian Magnetic Fields: Community Code to Serve the Magnetospheres of the Outer Planets Community. Space Sci Rev 219, 15 (2023). https://doi.org/10.1007/s11214-023-00961-3
 - Rabia, J., Nénon, Q., André, N., Hue, V., Santos-Costa, D., Kamran, A., & Blanc, M. (2024). Influence of the Jovian current sheet models on the mapping of the UV auroral footprints of Io, Europa, and Ganymede. Journal of Geophysical Research: Space Physics, 129, e2023JA032041. https://doi.org/10.1029/2023JA032041 
  
