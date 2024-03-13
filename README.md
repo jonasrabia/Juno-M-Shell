@@ -1,5 +1,7 @@
 ## Juno-M-Shell
-Juno M-Shell calculated with Python 3.9.12 using JRM33+CON2020 between PJ1 (2016-08-27) and PJ56 (2023-11-22) with a 1s-resolution. Data are provided by Jonas RABIA (IRAP-CNRS, contact : jonas.rabia@irap.omp.eu) and are also available at https://amda.cdpp.eu. 
+Juno M-Shell calculated with Python 3.9.12 using JRM33+CON2020 between PJ1 (2016-08-27) and PJ56 (2023-11-22) with a 1s-resolution. Data, plots and numerical models used for these calculations are provided by Jonas RABIA (IRAP-CNRS, contact : jonas.rabia@irap.omp.eu). Data are also available at https://amda.cdpp.eu. 
+
+**Dataset DOI:** [10.5281/zenodo.10813572 ](https://zenodo.org/doi/10.5281/zenodo.10813572)
 
 ### Models and calculation parameters
 - Jupiter's internal magnetic field is calculated using JRM33 with the 13th-order coefficients. The model is described in Connerney et al.,(2022). Use of a 18th-order model may provide a better match with Juno observations, as reported by Moirano et al., (2024, doi: 10.1029/2023JE008130) but would increase computation time. 
@@ -30,7 +32,7 @@ Magnetic field lines connected to the orbit of Io (R = 5.89 R<sub>J</sub>), Euro
 - Time series : M-Shell values are represented as a function of time, for each perijove. 
 
 ### References 
-- Connerney, J. E. P., M. H. Acuña, and N. F. Ness (1981), Modeling the Jovian current sheet and inner magnetosphere, J. Geophys. Res., 86(A10), 8370–8384, doi:10.1029/JA086iA10p08370
+- Connerney, J. E. P., M. H. Acuña, and N. F. Ness (1981), Modeling the Jovian current sheet and inner magnetosphere, J. Geophys. Res., 86(A10), 8370–8384, https://doi.org/10.1029/JA086iA10p08370
 - Connerney, J. E. P., Timmins, S., Herceg, M., & Joergensen, J. L. (2020). A Jovian magnetodisc model for the Juno era. Journal of Geophysical Research: Space Physics, 125, e2020JA028138. https://doi.org/10.1029/2020JA028138
 - Connerney, J. E. P., Timmins, S., Oliversen, R. J., Espley, J. R., Joergensen, J. L., Kotsiaros, S., et al. (2022). A new model of Jupiter's magnetic field at the completion of Juno's Prime Mission. Journal of Geophysical Research: Planets, 127, e2021JE007055. https://doi.org/10.1029/2021JE007055
 - Wilson, R.J., Vogt, M.F., Provan, G. et al. Internal and External Jovian Magnetic Fields: Community Code to Serve the Magnetospheres of the Outer Planets Community. Space Sci Rev 219, 15 (2023). https://doi.org/10.1007/s11214-023-00961-3
