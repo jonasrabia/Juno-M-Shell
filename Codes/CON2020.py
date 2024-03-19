@@ -4,11 +4,13 @@ import numpy as np
 #   Compute Jupiter's external magnetic field with the CON2020 model 
 #   See Connerney et al.,2020 (DOI:10.1029/2020JA028138) for further information on the model
 #
-#   Adapted by Jonas Rabia (IRAP-CNRS) from the CAN81 model,contact : jonas.rabia@irap.omp.eu
-#   Azimuthal magnetic field calculation is based on the CON2020 community code 
+#   Adapted by Jonas Rabia (IRAP-CNRS, contact : jonas.rabia@irap.omp.eu) from the CON2020 community code 
 #   See https://github.com/gabbyprovan/con2020 and Wilson et al., 2023 (DOI:10.1007/s11214-023-00961-3) for 
 #   further information on the numerical models
 #
+#   Brho and Bz components are calculated using the analytical equations from Connerney et al.(1981) 
+#   Bphi is calculated using a routine from the CON2020 community code, whose analytic equations are 
+#   presented in Wilson et al.(2023). 
 #   Required input : 
 #       - r | Radial distance in Rj (1 Rj = 71,492 km)
 #       - t | Colatitude S3RH in deg 
@@ -74,7 +76,6 @@ def ConvInputPol(r,theta,phi):
     x1 = x*cosxt + z*sinxt
     z1 = z*cosxt - x*sinxt    
     
-    #some other bits we need for the model
     rho1 = np.sqrt(x1*x1 + y1*y1)
     abs_z1 = np.abs(z1)
           
@@ -133,8 +134,7 @@ def ConvOutputPol(cost,sint,cosp,sinp,x1,y1,rho1,Brho1,Bphi1,Bz1):
             System III coordinates (nT).
         Bp : float
             Azimuthal component of magnetic field in right-handed System 
-            III coordinates (nT).
-            
+            III coordinates (nT). 
         
         '''        
         cosxp = np.cos(np.radians(155.8-180))
@@ -198,14 +198,6 @@ def CON2020(r_in,theta_in, phi_in):
     mu0_I0 = 139.6*2    # nT
     i_rho=16.7
 
-      # VALUES MAX VOGT ET AL. 2017
-    # mu0_I0 = 494    # nT
-    # i_rho=0.0   
-    # D = 2.5          # Rj
-    # a = 5.0           # Rj 
-    # b = 50.0            # Rj
-
-    
     # [Approximate formulas given in Connerney+1981_The magnetic field in Jupiter.]
     # [Cylindrical coordinates: in nT]
     if (rho <= a):
