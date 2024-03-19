@@ -9,7 +9,7 @@ import numpy as np
 #   further information on the numerical models
 #
 #   Brho and Bz components are calculated using the analytical equations from Connerney et al.(1981) 
-#   Bphi is calculated using a routine from the CON2020 community code, whose analytic equations are 
+#   Bphi is calculated using a routine from the CON2020 community code, whose analytical equations are 
 #   presented in Wilson et al.(2023). 
 #   Required input : 
 #       - r | Radial distance in Rj (1 Rj = 71,492 km)
