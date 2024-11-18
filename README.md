@@ -1,5 +1,5 @@
 ## Juno-M-Shell
-Juno M-Shell calculated with Python 3.9.12 using JRM33+CON2020 between PJ1 (2016-08-27) and PJ56 (2023-11-22) with a 1s-resolution. Data, plots and numerical models used for these calculations are provided by Jonas RABIA (IRAP-CNRS, contact : jonas.rabia@irap.omp.eu). Data are also available at https://amda.cdpp.eu. 
+Juno M-Shell calculated with Python 3.9.12 using JRM33+CON2020 between PJ1 (2016-08-27) and PJ65 (2024-09-20) with a 1s-resolution. Data, plots and numerical models used for these calculations are provided by Jonas RABIA (IRAP-CNRS, contact : jonas.rabia@irap.omp.eu). Data are also available at https://amda.cdpp.eu. 
 
 **Dataset DOI:** [10.5281/zenodo.10813572](https://zenodo.org/doi/10.5281/zenodo.10813572)
 
